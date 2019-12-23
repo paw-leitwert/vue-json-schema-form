@@ -1,6 +1,6 @@
 <template>
   <b-field :label="schema.title" :message="schema.description">
-    <b-input type="textarea" :minlength="schema.minLength" :maxlength="schema.maxLength" :value="value" @input="$emit('input', $event)">
+    <b-input type="textarea" :minlength="schema.minLength" :maxlength="schema.maxLength" :value="value" :disabled="schema.disabled" @input="$emit('input', $event)">
     </b-input>
   </b-field>
 </template>

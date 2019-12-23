@@ -1,6 +1,6 @@
 <template>
   <b-field :label="schema.title" :message="schema.description">
-    <b-datepicker :value="value" @input="$emit('input', $event)" placeholder="Click to select date">
+    <b-datepicker :value="value" :disabled="schema.disabled" @input="$emit('input', $event)" placeholder="Click to select date">
     </b-datepicker>
   </b-field>
 </template>

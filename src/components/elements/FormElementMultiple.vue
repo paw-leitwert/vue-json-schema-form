@@ -3,7 +3,7 @@
     <legend v-if="schema.title">{{ schema.title }}</legend>
     <div v-for="(item, index) in items" class="columns" :key="index">
       <div class="column">
-        <form-element :schema="schema.items" :value="item" @input="updateValue($event, index)"></form-element>
+        <form-element :schema="schema.items" :value="item" :disabled="schema.disabled" @input="updateValue($event, index)"></form-element>
       </div>
       <div class="column is-narrow">
         <button type="button" class="button is-danger" v-if="items.length > 0" @click="items.splice(index, 1)" :key="`remove-${index}`">Remove</button>
