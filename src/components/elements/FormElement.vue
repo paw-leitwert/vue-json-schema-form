@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" :schema='schema' :value='value' @input="$emit('input', $event)" />
+  <component :is="type" :schema='schema' :value='value' :disabled="schema.disabled" @input="$emit('input', $event)" />
 </template>
 
 <script>

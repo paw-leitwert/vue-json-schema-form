@@ -2,6 +2,7 @@
   <b-field :label="schema.title">
     <b-taginput
       :value="value"
+      :disabled="schema.disabled"
       icon="account-multiple"
       placeholder="Add item"
       @input="$emit('input', $event)">
